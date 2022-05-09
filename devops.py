@@ -1,11 +1,16 @@
-def add(first_term, second_term):
-    return first_term + second_term
+import calculator
 
-def subtract(first_term, second_term):
-    return first_term - second_term
 
-def multiply(first_term, second_term):
-    return first_term * second_term
+class TestCalculator:
 
-def division(first_term, second_term):
-    return first_term / second_term
+    def test_addition(self):
+        assert 4 == calculator.add(2, 2)
+
+    def test_subtraction(self):
+        assert 2 == calculator.subtract(4, 2)
+
+    def test_multiplication(self):
+        assert 8 == calculator.multiply(4, 2)
+
+    def test_division(self):
+        assert 2 == calculator.division(4, 2)
